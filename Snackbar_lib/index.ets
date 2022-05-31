@@ -117,7 +117,7 @@
 
 @Component
 export struct SimpleSnackBar{
-  @State message : string="message";
+  @State message : string = "message";
   build() {
         Column() {
           Flex({ direction: FlexDirection.ColumnReverse , alignItems : ItemAlign.Center ,justifyContent: FlexAlign.SpaceBetween }) {
@@ -135,4 +135,26 @@ export struct SimpleSnackBar{
   }
 }
 
+//@Entry
+//@Component
+//export struct msg_action {
+//  @State message : string = "message";
+//  @State button_text : string = "action";
+//  build() {
+//    Column() {
+//      Flex({ direction: FlexDirection.ColumnReverse , alignItems : ItemAlign.Center ,justifyContent: FlexAlign.SpaceBetween }) {
+//        Row() {
+//          Text("single line message with action").fontColor("#ffffff").padding({left:16})
+//          Button(this.button_text, { type: ButtonType.Normal, stateEffect: true }).fontColor("#ECD540")
+//            .backgroundColor("#9400D3").height(48)
+//            .width(100)
+//        }.backgroundColor("#9400D3")
+//      }.width('90%')
+//    }
+//    .width('100%')
+//    .margin({bottom:15})
+//
+//  }
+//}
+//
 
