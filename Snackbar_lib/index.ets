@@ -86,31 +86,53 @@
 //  }
 //}
 
-@Entry
+//@Entry
+//@Component
+//export struct msg_2line_action {
+//  build() {
+//    Column() {
+//      Flex({ direction: FlexDirection.ColumnReverse }) {
+//        Column() {
+//          Column() {
+//            Text("double line double line message double message")
+//              .textAlign(TextAlign.Start)
+//              .fontColor("#ffffff")
+//              .fontSize(15)
+//              .padding({ left: 16, right: 16, top:8 })
+//          }
+//          Column() {
+//            Button({ type: ButtonType.Normal, stateEffect: true }) {
+//              Text("longer action button").fontColor("#ECD540").fontSize(18)
+//            }.backgroundColor("#9400D3").margin({ right :8}).padding({left:8,right:8,bottom:16})
+//          }.alignItems(HorizontalAlign.End).backgroundColor("#9400D3")
+//          .width("100%").margin({top:18})
+//
+//        }.height(96).backgroundColor("#9400D3").width("90%")
+//      }
+//    }
+//    .width('100%').margin({ bottom: 18 })
+//
+//  }
+//}
+
 @Component
-export struct msg_2line_action {
+export struct SimpleSnackBar{
+  @State message : string="message";
   build() {
-    Column() {
-      Flex({ direction: FlexDirection.ColumnReverse }) {
         Column() {
-          Column() {
-            Text("double line double line message double message")
-              .textAlign(TextAlign.Start)
-              .fontColor("#ffffff")
-              .fontSize(15)
-              .padding({ left: 16, right: 16, top:8 })
-          }
-          Column() {
-            Button({ type: ButtonType.Normal, stateEffect: true }) {
-              Text("longer action button").fontColor("#ECD540").fontSize(18)
-            }.backgroundColor("#9400D3").margin({ right :8}).padding({left:8,right:8,bottom:16})
-          }.alignItems(HorizontalAlign.End).backgroundColor("#9400D3")
-          .width("100%").margin({top:18})
-
-        }.height(96).backgroundColor("#9400D3").width("90%")
-      }
-    }
-    .width('100%').margin({ bottom: 18 })
-
+          Flex({ direction: FlexDirection.ColumnReverse , alignItems : ItemAlign.Center ,justifyContent: FlexAlign.SpaceBetween }) {
+            Row() {
+              Text(this.message).fontColor("#ffffff").padding({left:16})
+            }.backgroundColor("#9400D3")
+          }.width('90%')
+        }.animation({
+          duration: 4000, // Animation duration
+          iterations: 1, // Number of playback times
+          playMode: PlayMode.Normal // Animation mode
+        })
+        .width('100%')
+        .margin({bottom:15})
   }
 }
+
+
