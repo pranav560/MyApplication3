@@ -18,7 +18,7 @@ export struct SimpleSnackBar {
           .onAppear(()=> {
             setTimeout(() => {
               this.show=Visibility.None;
-            },100000)
+            },4000)
           })
       }.visibility(this.show)
     }
