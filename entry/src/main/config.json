@@ -55,8 +55,7 @@
           "type": "pageAbility"
         },
         "pages": [
-          "pages/main_page",
-          "pages/trial"
+          "pages/main_page"
         ],
         "name": ".MainAbility",
         "window": {
