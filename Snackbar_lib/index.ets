@@ -5,9 +5,6 @@ export struct SimpleSnackBar {
   @State btn1: boolean = true;
   @State show: Visibility = Visibility.Visible;
 
-
-
-
   build() {
     Column() {
       Flex({
@@ -16,14 +13,14 @@ export struct SimpleSnackBar {
         justifyContent: FlexAlign.SpaceBetween
       }) {
           Row() {
-            Text(this.message).fontColor("#ffffff").padding({ left: 8 }).fontSize(15)
-          }.backgroundColor("#9400D3").height(60)
+            Text(this.message).fontColor("#ffffff").padding({ left: 16 }).fontSize(15)
+          }.backgroundColor("#9400D3").height(60).width('90%')
           .onAppear(()=> {
             setTimeout(() => {
               this.show=Visibility.None;
-            },4000)
+            },100000)
           })
-      }.width('90%').visibility(this.show)
+      }.visibility(this.show)
     }
     .width('100%')
     .margin({ bottom: 15 })
