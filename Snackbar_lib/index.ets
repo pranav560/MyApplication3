@@ -8,16 +8,15 @@ export struct SimpleSnackBar {
     Column() {
       Flex({
         direction: FlexDirection.ColumnReverse,
-        alignItems: ItemAlign.Center,
-        justifyContent: FlexAlign.SpaceBetween
+        alignItems: ItemAlign.Center
       }) {
           Row() {
-            Text(this.message).fontColor("#ffffff").padding({ left: 16 }).fontSize(15)
-          }.backgroundColor("#9400D3").height(60).width('90%')
+            Text(this.message).fontColor("#ffffff").padding({ left: 16 ,right:16}).fontSize(15)
+          }.backgroundColor("#9400D3").height(48).width('90%')
           .onAppear(()=> {
             setTimeout(() => {
               this.show=Visibility.None;
-            },4000)
+            },400000)
           })
       }.visibility(this.show)
     }
@@ -33,19 +32,19 @@ export struct msg_action {
   @State show: Visibility = Visibility.Visible;
   build() {
     Column() {
-      Flex({ direction: FlexDirection.ColumnReverse , alignItems : ItemAlign.Center ,justifyContent: FlexAlign.SpaceBetween }) {
-        Row() {
-          Text("single line message with action").fontColor("#ffffff").padding({left:16})
+      Flex({ direction: FlexDirection.ColumnReverse  ,justifyContent: FlexAlign.SpaceBetween }) {
+        Flex({ justifyContent: FlexAlign.SpaceBetween,alignItems: ItemAlign.Center }){
+          Text("single line msg with action").fontColor("#ffffff").padding({left:16}).fontSize(15)
           Button(this.button_text, { type: ButtonType.Normal, stateEffect: true }).fontColor("#ECD540")
-            .backgroundColor("#9400D3").height(48)
-            .width(100)
-        }.backgroundColor("#9400D3")
+            .backgroundColor("#9400D3")
+            .width(100).fontSize(18).margin({left:8,right:8,top:6,bottom:6})
+        }.backgroundColor("#9400D3").height(48)
         .onAppear(()=> {
           setTimeout(() => {
             this.show=Visibility.None;
-          },4000)
+          },4000000)
         })
-      }.width('90%').visibility(this.show)
+      }.width(344).visibility(this.show)
     }
     .width('100%')
     .margin({bottom:15})
@@ -66,12 +65,12 @@ export struct msg_2line_action {
             Text("double line message double line message  ").fontColor("#ffffff").fontSize(15).padding({ left: 16 })
           }.width(220)
           Button("action", { type: ButtonType.Normal, stateEffect: true }).fontColor("#ECD540")
-            .backgroundColor("#9400D3").height(64)
-            .width(100)
-        }.height(64).backgroundColor("#9400D3") .onAppear(()=> {
+            .backgroundColor("#9400D3").margin({left :8,right :8,top:16,bottom:16})
+            .width(100).fontSize(18)
+        }.height(68).backgroundColor("#9400D3").onAppear(()=> {
           setTimeout(() => {
             this.show=Visibility.None;
-          },4000)
+          },4000000)
         })
       }.visibility(this.show)
     }
@@ -87,31 +86,31 @@ export struct msg_2line_longaction {
   @State show: Visibility = Visibility.Visible;
   build() {
     Column() {
-      Flex({ direction: FlexDirection.ColumnReverse }) {
+      Flex({ direction: FlexDirection.ColumnReverse ,justifyContent: FlexAlign.SpaceBetween}) {
         Column() {
           Column() {
             Text(this.message)
               .textAlign(TextAlign.Start)
               .fontColor("#ffffff")
               .fontSize(15)
-              .padding({ left: 16, right: 16, top:8 })
+              .margin({ left: 16, right: 16, top:15 })
           }
           Column() {
             Button({ type: ButtonType.Normal, stateEffect: true }) {
               Text(this.button_text).fontColor("#ECD540").fontSize(18)
-            }.backgroundColor("#9400D3").margin({ right :8}).padding({left:8,right:8,bottom:16})
+            }.backgroundColor("#9400D3").margin({right :8,bottom:8}).padding({left:8,right:8,bottom:8}).width(150).height(30)
           }.alignItems(HorizontalAlign.End).backgroundColor("#9400D3")
           .width("100%").margin({top:18})
 
-        }.height(96).backgroundColor("#9400D3").width("90%")
+        }.height(100).backgroundColor("#9400D3").width("90%")
         .onAppear(()=> {
           setTimeout(() => {
             this.show=Visibility.None;
-          },4000)
+          },40000000)
         })
       }.visibility(this.show)
     }
-    .width('100%').margin({ bottom: 18 })
+    .width('100%').margin({ bottom: 15 })
   }
 }
 
