@@ -40,7 +40,6 @@ export struct msg_action {
             .width(100).fontSize(18).margin({left:8,right:8,top:6,bottom:6})
             .onClick(()=>{
               //trigger function
-
             })
         }.backgroundColor("#9400D3").height(48)
         .onAppear(()=> {
