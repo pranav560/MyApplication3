@@ -13,6 +13,7 @@ struct Index {
   button_text2 : string = "action2"
   button_text3 : string = "action3"
   button_text4 : string = "action4"
+  
   myAdd :()=> void =function(){
     console.log("test")
   }
@@ -25,6 +26,7 @@ struct Index {
      //msg_action({message :this.message2, button_text : this.button_text2,func : this.myAdd });
       msg_2line_action({message :this.message3, button_text : this.button_text3,func : this.myAdd});
      //msg_2line_longaction({message : this.message4, button_text : this.button_text4,func : this.myAdd });
+
 
      }
 
