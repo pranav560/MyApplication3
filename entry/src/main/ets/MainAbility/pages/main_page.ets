@@ -13,7 +13,7 @@ struct Index {
   button_text2 : string = "action2"
   button_text3 : string = "action3"
   button_text4 : string = "action4"
-  
+
   myAdd :()=> void =function(){
     console.log("test")
   }
