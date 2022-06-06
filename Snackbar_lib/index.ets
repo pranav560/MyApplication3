@@ -16,7 +16,7 @@ export struct SimpleSnackBar {
           .onAppear(()=> {
             setTimeout(() => {
               this.show=Visibility.None;
-            },400000)
+            },4000)
           })
       }.visibility(this.show)
     }
@@ -30,6 +30,7 @@ export struct msg_action {
   @State message : string = "message";
   @State button_text : string = "action";
   @State show: Visibility = Visibility.Visible;
+  func :()=> void ;
   build() {
     Column() {
       Flex({ direction: FlexDirection.ColumnReverse  ,justifyContent: FlexAlign.SpaceBetween }) {
@@ -38,14 +39,12 @@ export struct msg_action {
           Button(this.button_text, { type: ButtonType.Normal, stateEffect: true }).fontColor("#ECD540")
             .backgroundColor("#9400D3")
             .width(100).fontSize(18).margin({left:8,right:8,top:6,bottom:6})
-            .onClick(()=>{
-              //trigger function
-            })
+            .onClick(this.func)
         }.backgroundColor("#9400D3").height(48)
         .onAppear(()=> {
           setTimeout(() => {
             this.show=Visibility.None;
-          },4000000)
+          },4000)
         })
       }.width(344).visibility(this.show)
     }
@@ -60,6 +59,7 @@ export struct msg_2line_action {
   @State message : string = "message";
   @State button_text : string = "action";
   @State show: Visibility = Visibility.Visible;
+  func :()=> void ;
   build() {
     Column() {
       Flex({ direction: FlexDirection.ColumnReverse,justifyContent: FlexAlign.SpaceBetween }) {
@@ -70,14 +70,11 @@ export struct msg_2line_action {
           Button("action", { type: ButtonType.Normal, stateEffect: true }).fontColor("#ECD540")
             .backgroundColor("#9400D3").margin({left :8,right :8,top:16,bottom:16})
             .width(100).fontSize(18)
-            .onClick(()=>{
-              //trigger function
-
-          })
+            .onClick(this.func)
         }.height(68).backgroundColor("#9400D3").onAppear(()=> {
           setTimeout(() => {
             this.show=Visibility.None;
-          },4000000)
+          },4000)
         })
       }.visibility(this.show)
     }
@@ -91,6 +88,7 @@ export struct msg_2line_longaction {
   @State message : string = "message";
   @State button_text : string = "action";
   @State show: Visibility = Visibility.Visible;
+  func :()=> void ;
   build() {
     Column() {
       Flex({ direction: FlexDirection.ColumnReverse ,justifyContent: FlexAlign.SpaceBetween}) {
@@ -106,10 +104,7 @@ export struct msg_2line_longaction {
             Button({ type: ButtonType.Normal, stateEffect: true }) {
               Text(this.button_text).fontColor("#ECD540").fontSize(18)
             }.backgroundColor("#9400D3").margin({right :8,bottom:8}).padding({left:8,right:8,bottom:8}).width(150).height(30)
-            .onClick(()=>{
-              //trigger function
-
-            })
+            .onClick(this.func)
           }.alignItems(HorizontalAlign.End).backgroundColor("#9400D3")
           .width("100%").margin({top:18})
 
@@ -117,7 +112,7 @@ export struct msg_2line_longaction {
         .onAppear(()=> {
           setTimeout(() => {
             this.show=Visibility.None;
-          },40000000)
+          },4000)
         })
       }.visibility(this.show)
     }

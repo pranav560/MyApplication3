@@ -1,5 +1,8 @@
 import { SimpleSnackBar,msg_action, msg_2line_action,msg_2line_longaction   }  from "../../../../../../Snackbar_lib/index"
 
+//@State function f1(){
+//  this.test = false ;
+//}
 @Entry
 @Component
 struct Index {
@@ -10,15 +13,20 @@ struct Index {
   button_text2 : string = "action2"
   button_text3 : string = "action3"
   button_text4 : string = "action4"
+  myAdd :()=> void =function(){
+    console.log("test")
+  }
+
 
 
   build() {
     Row() {
       //SimpleSnackBar({message :this.message1});
-     //msg_action({message :this.message2, button_text : this.button_text2});
-     // msg_2line_action({message :this.message3, button_text : this.button_text3});
-     //msg_2line_longaction({message : this.message4, button_text : this.button_text4 });
+     //msg_action({message :this.message2, button_text : this.button_text2,func : this.myAdd });
+      msg_2line_action({message :this.message3, button_text : this.button_text3,func : this.myAdd});
+     //msg_2line_longaction({message : this.message4, button_text : this.button_text4,func : this.myAdd });
 
-    }
+     }
+
   }
 }
