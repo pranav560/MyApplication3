@@ -1,7 +1,7 @@
 {
   "name": "snackbar_lib",
   "version": "1.0.0",
-  "main": "index.ets",
+  "main": "snackBar.ets",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

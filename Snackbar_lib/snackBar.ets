@@ -56,7 +56,7 @@ export struct OneLineActionSnack {
     Column() {
       Flex({ direction: FlexDirection.ColumnReverse, justifyContent: FlexAlign.SpaceBetween }) {
         Flex({ justifyContent: FlexAlign.SpaceBetween, alignItems: ItemAlign.Center }) {
-          Text("single line msg with action")
+          Text(this.message)
             .fontColor("#ffffff")
             .padding({ left: 16 })
             .fontSize(15)
@@ -99,14 +99,14 @@ export struct TwoLineActionSnack {
       Flex({ direction: FlexDirection.ColumnReverse, justifyContent: FlexAlign.SpaceBetween }) {
         Row() {
           Column() {
-            Text("double line message double line message")
+            Text(this.message)
               .fontColor("#ffffff")
               .fontSize(15)
               .padding({ left: 16 })
           }
           .width(220)
 
-          Button("action", { type: ButtonType.Normal, stateEffect: true })
+          Button(this.button_text, { type: ButtonType.Normal, stateEffect: true })
             .fontColor("#ECD540")
             .backgroundColor("#9400D3")
             .margin({ left: 8, right: 8, top: 16, bottom: 16 })
