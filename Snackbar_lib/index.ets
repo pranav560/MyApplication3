@@ -39,7 +39,9 @@ export struct msg_action {
           Button(this.button_text, { type: ButtonType.Normal, stateEffect: true }).fontColor("#ECD540")
             .backgroundColor("#9400D3")
             .width(100).fontSize(18).margin({left:8,right:8,top:6,bottom:6})
-            .onClick(this.func)
+            .onClick(()=>{
+              this.func();
+            })
         }.backgroundColor("#9400D3").height(48)
         .onAppear(()=> {
           setTimeout(() => {
@@ -70,7 +72,9 @@ export struct msg_2line_action {
           Button("action", { type: ButtonType.Normal, stateEffect: true }).fontColor("#ECD540")
             .backgroundColor("#9400D3").margin({left :8,right :8,top:16,bottom:16})
             .width(100).fontSize(18)
-            .onClick(this.func)
+            .onClick(()=>{
+              this.func();
+            })
         }.height(68).backgroundColor("#9400D3").onAppear(()=> {
           setTimeout(() => {
             this.show=Visibility.None;
@@ -104,7 +108,9 @@ export struct msg_2line_longaction {
             Button({ type: ButtonType.Normal, stateEffect: true }) {
               Text(this.button_text).fontColor("#ECD540").fontSize(18)
             }.backgroundColor("#9400D3").margin({right :8,bottom:8}).padding({left:8,right:8,bottom:8}).width(150).height(30)
-            .onClick(this.func)
+            .onClick(()=>{
+              this.func();
+            })
           }.alignItems(HorizontalAlign.End).backgroundColor("#9400D3")
           .width("100%").margin({top:18})
 
