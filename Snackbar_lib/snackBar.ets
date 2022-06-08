@@ -145,32 +145,33 @@ export struct BigTwoLineActionSnack {
         Column() {
           Column() {
             Text(this.message)
+              .textOverflow({ overflow: TextOverflow.None })
               .textAlign(TextAlign.Start)
               .fontColor("#ffffff")
               .fontSize(15)
               .margin({ left: 16, right: 16, top: 15 })
-          }
-
+          }.width("100%")
           Column() {
-            Button({ type: ButtonType.Normal, stateEffect: true }) {
-              Text(this.button_text)
-                .fontColor("#ECD540")
-                .fontSize(18)
+            Column() {
+              Button({ type: ButtonType.Normal, stateEffect: true }) {
+                Text(this.button_text)
+                  .fontColor("#ECD540")
+                  .fontSize(18)
+              }
+              .backgroundColor("#9400D3")
+              .margin({ right: 8, bottom: 8 })
+              .padding({ left: 8, right: 8, bottom: 8 })
+              .width(200)
+              .height(30)
+              .onClick(() => {
+                this.func();
+              })
             }
+            .alignItems(HorizontalAlign.End)
             .backgroundColor("#9400D3")
-            .margin({ right: 8, bottom: 8 })
-            .padding({ left: 8, right: 8, bottom: 8 })
-            .width(150)
-            .height(30)
-            .onClick(() => {
-              this.func();
-            })
+            .width("100%")
+            .margin({ top: 18 })
           }
-          .alignItems(HorizontalAlign.End)
-          .backgroundColor("#9400D3")
-          .width("100%")
-          .margin({ top: 18 })
-
         }
         .height(100)
         .backgroundColor("#9400D3")
@@ -178,7 +179,7 @@ export struct BigTwoLineActionSnack {
         .onAppear(() => {
           setTimeout(() => {
             this.show = Visibility.None;
-          }, 4000)
+          }, 400000)
         })
       }
       .visibility(this.show)

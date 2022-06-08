@@ -21,12 +21,12 @@ import { SimpleSnack, OneLineActionSnack, TwoLineActionSnack, BigTwoLineActionSn
 struct Index {
 
   message1: string = "Text associated with SimpleSnack"
-  message2: string = "Text associated with OneLineActionSnack"
+  message2: string = "Text of OneLineActionSnack"
   message3: string = "Longer text associated with TwoLineActionSnack"
-  message4: string = "Longer text associated with BigTwoLineActionSnack"
+  message4: string = "Longer text associated BigTwoLine Action Snack"
   button_text2: string = "ACTION"
   button_text3: string = "ACTION"
-  button_text4: string = "LONGER ACTION TEXT"
+  button_text4: string = "LONGER ACTION"
   SnackButtonAction: () => void = function () {
     console.log("test")
   }
@@ -34,9 +34,9 @@ struct Index {
   build() {
     Row() {
       //SimpleSnack({message :this.message1});
-      // OneLineActionSnack({message :this.message2, button_text : this.button_text2,func : this.SnackButtonAction });
-      TwoLineActionSnack({ message: this.message3, button_text: this.button_text3, func: this.SnackButtonAction });
-     // BigTwoLineActionSnack({message : this.message4, button_text : this.button_text4,func : this.SnackButtonAction });
+       //OneLineActionSnack({message :this.message2, button_text : this.button_text2,func : this.SnackButtonAction });
+      //TwoLineActionSnack({ message: this.message3, button_text: this.button_text3, func: this.SnackButtonAction });
+     BigTwoLineActionSnack({message : this.message4, button_text : this.button_text4,func : this.SnackButtonAction });
     }
 
   }
