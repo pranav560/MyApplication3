@@ -104,6 +104,7 @@ export struct TwoLineActionSnack {
               .fontSize(15)
               .padding({ left: 16 })
           }
+          .alignItems(HorizontalAlign.Start)
           .width(220)
 
           Button(this.button_text, { type: ButtonType.Normal, stateEffect: true })
@@ -150,7 +151,7 @@ export struct BigTwoLineActionSnack {
               .fontColor("#ffffff")
               .fontSize(15)
               .margin({ left: 16, right: 16, top: 15 })
-          }.width("100%")
+          }.width("100%").alignItems(HorizontalAlign.Start)
           Column() {
             Column() {
               Button({ type: ButtonType.Normal, stateEffect: true }) {
@@ -179,7 +180,7 @@ export struct BigTwoLineActionSnack {
         .onAppear(() => {
           setTimeout(() => {
             this.show = Visibility.None;
-          }, 400000)
+          }, 4000)
         })
       }
       .visibility(this.show)
