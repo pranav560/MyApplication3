@@ -24,9 +24,9 @@ Use respective components to create below radio button/group design.
 ## Snackbar Designs: 
 
 ### snackbar with only message
-
+```ets
 SimpleSnack({ message: this.message1 })
-
+```
 ### snackbar with one line message plus the action button
 ```ets
 OneLineActionSnack({
@@ -36,20 +36,21 @@ OneLineActionSnack({
           });
 ```
 ### snackbar with two line message plus the action button
-
+```ets
 TwoLineActionSnack({
             message: this.message3,
             button_text: this.button_text3,
             func: this.SnackButtonAction
           });
+```
 ### snackbar with longer two line message plus the longer action button
-
+```ets
 BigTwoLineActionSnack({
             message: this.message4,
             button_text: this.button_text4,
             func: this.SnackButtonAction
           });
-          
+```         
 ## Compatibility
 Supports OpenHarmony API version 8
 
