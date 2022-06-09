@@ -28,12 +28,13 @@ Use respective components to create below radio button/group design.
 SimpleSnack({ message: this.message1 })
 
 ### snackbar with one line message plus the action button
-
+```ets
 OneLineActionSnack({
             message: this.message2,
             button_text: this.button_text2,
             func: this.SnackButtonAction
           });
+```
 ### snackbar with two line message plus the action button
 
 TwoLineActionSnack({
