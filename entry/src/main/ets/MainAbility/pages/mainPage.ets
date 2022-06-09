@@ -27,17 +27,98 @@ struct Index {
   button_text2: string = "ACTION"
   button_text3: string = "ACTION"
   button_text4: string = "LONGER ACTION"
+  @State btn1 :boolean = false;
+  @State btn2 :boolean = false;
+  @State btn3 :boolean = false;
+  @State btn4 :boolean = false;
   SnackButtonAction: () => void = function () {
     console.log("test")
   }
 
   build() {
-    Row() {
-      //SimpleSnack({message :this.message1});
-       //OneLineActionSnack({message :this.message2, button_text : this.button_text2,func : this.SnackButtonAction });
-      //TwoLineActionSnack({ message: this.message3, button_text: this.button_text3, func: this.SnackButtonAction });
-    // BigTwoLineActionSnack({message : this.message4, button_text : this.button_text4,func : this.SnackButtonAction });
-    }
+    Stack() {
+      Column({ space: 8 }) {
+        Column() {
+          Button({ type: ButtonType.Capsule, stateEffect: true }) {
+            Text("SimpleSnack").fontColor(Color.Black).fontSize(25).padding(7)
+          }.backgroundColor("#00FFEF").margin(10)
+          .onClick(() => {
+            this.btn1 = true;
+            this.btn2 = false;
+            this.btn3 = false;
+            this.btn4 = false;
+          })
 
+        }
+
+        Column() {
+          Button({ type: ButtonType.Capsule, stateEffect: true }) {
+            Text("OneLineActionSnack").fontColor(Color.Black).fontSize(25).padding(7)
+          }.backgroundColor("#00FFEF").margin(10)
+          .onClick(() => {
+            this.btn1 = false;
+            this.btn2 = true;
+            this.btn3 = false;
+            this.btn4 = false;
+          })
+
+
+        }
+
+        Column() {
+          Button({ type: ButtonType.Capsule, stateEffect: true }) {
+            Text("TwoLineActionSnack").fontColor(Color.Black).fontSize(25).padding(7)
+          }.backgroundColor("#00FFEF").margin(10)
+          .onClick(() => {
+            this.btn1 = false;
+            this.btn2 = false;
+            this.btn3 = true;
+            this.btn4 = false;
+          })
+
+
+        }
+
+        Column() {
+          Button({ type: ButtonType.Capsule, stateEffect: true }) {
+            Text("BigTwoLineActionSnack").fontColor(Color.Black).fontSize(25).padding(7)
+          }.backgroundColor("#00FFEF").margin(10)
+          .onClick(() => {
+            this.btn1 = false;
+            this.btn2 = false;
+            this.btn3 = false;
+            this.btn4 = true;
+          })
+
+
+        }
+
+      }
+      if (this.btn1) {
+        SimpleSnack({ message: this.message1 })
+      }
+      if (this.btn1) {
+        OneLineActionSnack({
+          message: this.message2,
+          button_text: this.button_text2,
+          func: this.SnackButtonAction
+        });
+      }
+      if (this.btn1) {
+        TwoLineActionSnack({
+          message: this.message3,
+          button_text: this.button_text3,
+          func: this.SnackButtonAction
+        });
+      }
+      if (this.btn1) {
+        BigTwoLineActionSnack({
+          message: this.message4,
+          button_text: this.button_text4,
+          func: this.SnackButtonAction
+        });
+      }
+
+    }
   }
 }
