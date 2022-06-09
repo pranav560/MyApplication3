@@ -15,7 +15,8 @@ Details about OpenHarmony NPM environment configuration, see at [here](https://g
 Import all components at once
 
 ```ets
-import { RadioButton, RadioOption, RadioGroup }  from '@ohos/material-radio'
+import { SimpleSnack, OneLineActionSnack, TwoLineActionSnack, BigTwoLineActionSnack
+}  from "@ohos/snackbar"
 ```
 
 Use respective components to create below radio button/group design.
