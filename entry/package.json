@@ -9,5 +9,7 @@
   "description": "example description",
   "repository": {},
   "license": "ISC",
-  "dependencies": "file:../Snackbar_lib/index.ets"
+  "dependencies": {
+    "@ohos/snackbar": "file:../snackbar"
+  }
 }

@@ -15,10 +15,8 @@
 
 @Component
 export struct SimpleSnack {
-
   @State message: string = "message";
   @State show: Visibility = Visibility.Visible;
-
   build() {
     Column() {
       Flex({ direction: FlexDirection.ColumnReverse, alignItems: ItemAlign.Center }) {
@@ -46,12 +44,10 @@ export struct SimpleSnack {
 
 @Component
 export struct OneLineActionSnack {
-
   @State message: string = "message";
   @State button_text: string = "action";
   @State show: Visibility = Visibility.Visible;
   func: () => void ;
-
   build() {
     Column() {
       Flex({ direction: FlexDirection.ColumnReverse, justifyContent: FlexAlign.SpaceBetween }) {
@@ -68,6 +64,7 @@ export struct OneLineActionSnack {
             .margin({ left: 8, right: 8, top: 6, bottom: 6 })
             .onClick(() => {
               this.func();
+              this.show = Visibility.None;
             })
         }
         .backgroundColor("#9400D3")
@@ -88,12 +85,10 @@ export struct OneLineActionSnack {
 
 @Component
 export struct TwoLineActionSnack {
-
   @State message: string = "message";
   @State button_text: string = "action" ;
   @State show: Visibility = Visibility.Visible;
   func: () => void ;
-
   build() {
     Column() {
       Flex({ direction: FlexDirection.ColumnReverse, justifyContent: FlexAlign.SpaceBetween }) {
@@ -106,7 +101,6 @@ export struct TwoLineActionSnack {
           }
           .alignItems(HorizontalAlign.Start)
           .width(220)
-
           Button(this.button_text, { type: ButtonType.Normal, stateEffect: true })
             .fontColor("#ECD540")
             .backgroundColor("#9400D3")
@@ -115,6 +109,7 @@ export struct TwoLineActionSnack {
             .fontSize(18)
             .onClick(() => {
               this.func();
+              this.show = Visibility.None;
             })
         }
         .height(68)
@@ -134,12 +129,10 @@ export struct TwoLineActionSnack {
 
 @Component
 export struct BigTwoLineActionSnack {
-
   @State message: string = "message";
   @State button_text: string = "action";
   @State show: Visibility = Visibility.Visible;
   func: () => void ;
-
   build() {
     Column() {
       Flex({ direction: FlexDirection.ColumnReverse, justifyContent: FlexAlign.SpaceBetween }) {
@@ -166,6 +159,7 @@ export struct BigTwoLineActionSnack {
               .height(30)
               .onClick(() => {
                 this.func();
+                this.show = Visibility.None;
               })
             }
             .alignItems(HorizontalAlign.End)
