@@ -19,7 +19,7 @@ import { SimpleSnack, OneLineActionSnack, TwoLineActionSnack, BigTwoLineActionSn
 }  from "@ohos/snackbar"
 ```
 
-Use respective components to create below snackbars as per the need.
+OR Use respective components to create below snackbars as per the need.
 
 ## Snackbar Designs: 
 
