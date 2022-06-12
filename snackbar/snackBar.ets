@@ -144,7 +144,8 @@ export struct BigTwoLineActionSnack {
               .fontColor("#ffffff")
               .fontSize(15)
               .margin({ left: 16, right: 16, top: 15 })
-          }.width("100%").alignItems(HorizontalAlign.Start)
+          }.width("100%")
+          .alignItems(HorizontalAlign.Start)
           Column() {
             Column() {
               Button({ type: ButtonType.Normal, stateEffect: true }) {
@@ -179,7 +180,8 @@ export struct BigTwoLineActionSnack {
       }
       .visibility(this.show)
     }
-    .width('100%').margin({ bottom: 15 })
+    .width('100%')
+    .margin({ bottom: 15 })
   }
 }
 

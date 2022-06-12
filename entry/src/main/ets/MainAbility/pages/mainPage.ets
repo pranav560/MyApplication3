@@ -36,7 +36,8 @@ struct Index {
         Column() {
           Button({ type: ButtonType.Capsule, stateEffect: true }) {
             Text("SimpleSnack").fontColor(Color.Black).fontSize(25).padding(7)
-          }.backgroundColor("#00FFEF").margin(10)
+          }
+          .backgroundColor("#00FFEF").margin(10)
           .onClick(() => {
             this.btn= 1;
           })
@@ -44,7 +45,8 @@ struct Index {
         Column() {
           Button({ type: ButtonType.Capsule, stateEffect: true }) {
             Text("OneLineActionSnack").fontColor(Color.Black).fontSize(25).padding(7)
-          }.backgroundColor("#00FFEF").margin(10)
+          }
+          .backgroundColor("#00FFEF").margin(10)
           .onClick(() => {
             this.btn = 2;
           })
@@ -52,7 +54,8 @@ struct Index {
         Column() {
           Button({ type: ButtonType.Capsule, stateEffect: true }) {
             Text("TwoLineActionSnack").fontColor(Color.Black).fontSize(25).padding(7)
-          }.backgroundColor("#00FFEF").margin(10)
+          }
+          .backgroundColor("#00FFEF").margin(10)
           .onClick(() => {
             this.btn = 3;
           })
@@ -90,7 +93,8 @@ struct Index {
           func: this.SnackButtonAction
         });
       }
-    }.width("100%")
+    }
+    .width("100%")
     .alignContent(Alignment.Top)
   }
 }
