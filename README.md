@@ -1,4 +1,4 @@
-# Material_Component_Snackbar
+# Material_UI_Component_Snackbar
 
 Material component Snackbar design in OpenHarmony.
 
@@ -6,7 +6,7 @@ Material component Snackbar design in OpenHarmony.
 
 Install using npm
 
-```npm i ohos-material-radio```
+```npm install https://github.com/Applib-OpenHarmony/Material_UI_Snackbar```
 
 Details about OpenHarmony NPM environment configuration, see at [here](https://gitee.com/openharmony-tpc/docs/blob/master/OpenHarmony_npm_usage.md)
 
@@ -19,15 +19,25 @@ import { SimpleSnack, OneLineActionSnack, TwoLineActionSnack, BigTwoLineActionSn
 }  from "@ohos/snackbar"
 ```
 
-Use respective components to create below radio button/group design.
+OR Use respective components to create below snackbars as per the need.
 
 ## Snackbar Designs: 
 
 ### snackbar with only message
 ```ets
+import { SimpleSnack
+}  from "@ohos/snackbar"
+```
+```ets
 SimpleSnack({ message: this.message1 })
 ```
+![s1](https://user-images.githubusercontent.com/84433855/173008655-0f4d33ec-dcf0-4e1c-a9a7-7b48fa0006a2.png)
+
 ### snackbar with one line message plus the action button
+```ets
+import { OneLineActionSnack
+}  from "@ohos/snackbar"
+```
 ```ets
 OneLineActionSnack({
             message: this.message2,
@@ -35,7 +45,13 @@ OneLineActionSnack({
             func: this.SnackButtonAction
           });
 ```
+![s2](https://user-images.githubusercontent.com/84433855/173008731-c6df6d51-66cc-4cf0-bc86-57e0b2b60c62.png)
+
 ### snackbar with two line message plus the action button
+```ets
+import { TwoLineActionSnack
+}  from "@ohos/snackbar"
+```
 ```ets
 TwoLineActionSnack({
             message: this.message3,
@@ -43,7 +59,13 @@ TwoLineActionSnack({
             func: this.SnackButtonAction
           });
 ```
+![s3](https://user-images.githubusercontent.com/84433855/173008773-43338d25-e5fb-43c0-8405-704fec24db57.png)
+
 ### snackbar with longer two line message plus the longer action button
+```ets
+import { BigTwoLineActionSnack
+}  from "@ohos/snackbar"
+```
 ```ets
 BigTwoLineActionSnack({
             message: this.message4,
@@ -51,14 +73,10 @@ BigTwoLineActionSnack({
             func: this.SnackButtonAction
           });
 ```         
+![s4](https://user-images.githubusercontent.com/84433855/173008958-96d9c4b5-893c-4213-9143-83e11898741e.png)
+
 ## Compatibility
 Supports OpenHarmony API version 8
-
-## Code Contribution
-If you find any problems during usage, you can submit an [Issue](https://github.com/Applib-OpenHarmony/Material_UI_Snackbar/issues) to us. Of course, we also welcome you to send us [PR](https://github.com/Applib-OpenHarmony/Material_UI_Snackbar/pulls).
-
-## Open source License
-This project is based on [Apache License 2.0](https://github.com/Applib-OpenHarmony/Meterial-Components-Radio/blob/main/LICENSE.txt), please enjoy and participate in open source freely.
 
 # Reference:
 
