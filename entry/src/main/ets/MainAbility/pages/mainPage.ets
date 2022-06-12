@@ -90,6 +90,7 @@ struct Index {
           func: this.SnackButtonAction
         });
       }
-    }
+    }.width("100%")
+    .alignContent(Alignment.Top)
   }
 }
