@@ -23,7 +23,7 @@ OR Use respective components to create below snackbars as per the need.
 
 ## Snackbar Designs: 
 
-### snackbar with only message
+## Snackbar with only message
 ```ets
 import { SimpleSnack
 }  from "@ohos/snackbar"
@@ -33,7 +33,7 @@ SimpleSnack({ message: this.message1 })
 ```
 ![s1](https://user-images.githubusercontent.com/84433855/173008655-0f4d33ec-dcf0-4e1c-a9a7-7b48fa0006a2.png)
 
-### snackbar with one line message plus the action button
+## Snackbar with one line message plus the action button
 ```ets
 import { OneLineActionSnack
 }  from "@ohos/snackbar"
@@ -47,7 +47,7 @@ OneLineActionSnack({
 ```
 ![s2](https://user-images.githubusercontent.com/84433855/173008731-c6df6d51-66cc-4cf0-bc86-57e0b2b60c62.png)
 
-### snackbar with two line message plus the action button
+## Snackbar with two line message plus the action button
 ```ets
 import { TwoLineActionSnack
 }  from "@ohos/snackbar"
@@ -61,7 +61,7 @@ TwoLineActionSnack({
 ```
 ![s3](https://user-images.githubusercontent.com/84433855/173008773-43338d25-e5fb-43c0-8405-704fec24db57.png)
 
-### snackbar with longer two line message plus the longer action button
+## Snackbar with longer two line message plus the longer action button
 ```ets
 import { BigTwoLineActionSnack
 }  from "@ohos/snackbar"
