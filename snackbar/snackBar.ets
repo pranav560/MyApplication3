@@ -41,7 +41,6 @@ export struct SimpleSnack {
     .margin({ bottom: 15 })
   }
 }
-
 @Component
 export struct OneLineActionSnack {
   @State message: string = "message";
@@ -82,7 +81,6 @@ export struct OneLineActionSnack {
     .margin({ bottom: 15 })
   }
 }
-
 @Component
 export struct TwoLineActionSnack {
   @State message: string = "message";
@@ -126,7 +124,6 @@ export struct TwoLineActionSnack {
     .margin({ bottom: 15 })
   }
 }
-
 @Component
 export struct BigTwoLineActionSnack {
   @State message: string = "message";
@@ -184,5 +181,3 @@ export struct BigTwoLineActionSnack {
     .margin({ bottom: 15 })
   }
 }
-
-
