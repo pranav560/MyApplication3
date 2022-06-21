@@ -24,7 +24,7 @@ shown and finally pass the object to MaterialSnackBar and action associated with
 
 ## Snackbar Designs: 
 
-## Snackbar with only message
+## SimpleSnack ( Snackbar with only message )
 ```ets
 //Creating object
 @State snackBarModel1: SnackBarModel = new SnackBarModel(SnackBarType.SimpleSnack)
@@ -47,7 +47,7 @@ MaterialSnackBar({
 ```
 ![s1](https://user-images.githubusercontent.com/84433855/173008655-0f4d33ec-dcf0-4e1c-a9a7-7b48fa0006a2.png)
 
-## Snackbar with one line message plus the action button
+## OneLineActionSnack ( Snackbar with one line message plus the action button )
 ```ets
 //Creating object
 @State snackBarModel2: SnackBarModel = new SnackBarModel(SnackBarType.OneLineActionSnack)
@@ -77,7 +77,7 @@ MaterialSnackBar({
 ```
 ![s2](https://user-images.githubusercontent.com/84433855/173008731-c6df6d51-66cc-4cf0-bc86-57e0b2b60c62.png)
 
-## Snackbar with two line message plus the action button
+##  TwoLineActionSnack ( Snackbar with two line message plus the action button )
 ```ets
 //Creating object
 @State snackBarModel3: SnackBarModel = new SnackBarModel(SnackBarType.TwoLineActionSnack)
@@ -107,7 +107,7 @@ MaterialSnackBar({
 ```
 ![s3](https://user-images.githubusercontent.com/84433855/173008773-43338d25-e5fb-43c0-8405-704fec24db57.png)
 
-## Snackbar with longer two line message plus the longer action button
+##  BigLineActionSnack ( Snackbar with longer two line message plus the longer action button )
 ```ets
 //Creating object
 @State snackBarModel4: SnackBarModel = new SnackBarModel(SnackBarType.BigTwoLineActionSnack)
