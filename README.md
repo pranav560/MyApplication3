@@ -15,64 +15,133 @@ Details about OpenHarmony NPM environment configuration, see at [here](https://g
 Import all components at once
 
 ```ets
-import { SimpleSnack, OneLineActionSnack, TwoLineActionSnack, BigTwoLineActionSnack
-}  from "@ohos/snackbar"
+import { MaterialSnackBar ,
+  SnackBarModel ,SnackBarType
+}  from "@ohos/material-snackbar"
 ```
 
-OR Use respective components to create below snackbars as per the need.
 
+Access snackbar attributes through a object of SnackBarModel and customize the snackbar(if needed) using setter functions as
+shown and finally pass the object to MaterialSnackBar and action associated with action button.
+<br>
+**Note:** SnackBarModel is mandatory to import because the user can only modify the snackbar from object of SnackBarModel
+class. And importing SnackBarType is also equally important because it is the enum class which decide snackbar type . 
+Mandatory attributes are marked below, which are needed to be set by the user.
+Failure to provide data for mandatory attribute will push error in console.
+<br>
+```ets
+Set Functions --> Working
+Snackbar Attributes:
+-SnackBarType --> SnackBarModel constructor parameter  //Mandatory
+-setSnackBarText --> assign value to 'snackBarText'   //Mandatory
+-setButtonText -->  assign value to 'snackButtonText'        //Mandatory except for SimpleSnack
+-setSnackTextColor --> assign value to 'snackTextColor' 
+-setSnackBackColor --> assign value to 'snackBackColor' 
+-setOpacity --> assign value to 'opacity' 
+-setTimer --> assign value to 'timer' 
+-setButtonTextColor --> assign value to 'ButtonTextColor' 
+```
 ## Snackbar Designs: 
 
 ## Snackbar with only message
 ```ets
-import { SimpleSnack
-}  from "@ohos/snackbar"
+//Creating object
+@State snackBarModel1: SnackBarModel = new SnackBarModel(SnackBarType.SimpleSnack)
 ```
 ```ets
-SimpleSnack({ message: this.message1 })
+//Customization
+aboutToAppear(){
+    this.snackBarModel1.setSnackBarText("Text associated with SimpleSnack")    //Mandatory
+    this.snackBarModel1.setSnackTextColor("#ffffff")
+    this.snackBarModel1.setSnackBackColor("#9400D3")
+    this.snackBarModel1.setOpacity(1)
+    this.snackBarModel1.setTimer(4000)
+}
+```
+```ets
+//Passing Customized/Non-customized object to MaterialSnackBar
+MaterialSnackBar({
+          obj : this.snackBarModel1
+        })
 ```
 ![s1](https://user-images.githubusercontent.com/84433855/173008655-0f4d33ec-dcf0-4e1c-a9a7-7b48fa0006a2.png)
 
 ## Snackbar with one line message plus the action button
 ```ets
-import { OneLineActionSnack
-}  from "@ohos/snackbar"
+//Creating object
+@State snackBarModel2: SnackBarModel = new SnackBarModel(SnackBarType.OneLineActionSnack)
 ```
 ```ets
-OneLineActionSnack({
-            message: this.message2,
-            button_text: this.button_text2,
-            func: this.SnackButtonAction
-          });
+//Customization
+aboutToAppear(){
+    this.snackBarModel2.setSnackBarText("Text of OneLineActionSnack")       //Mandatory
+    this.snackBarModel2.setSnackTextColor("#ffffff")
+    this.snackBarModel2.setSnackBackColor("#9400D3")
+    this.snackBarModel2.setOpacity(1)
+    this.snackBarModel2.setTimer(4000)
+    this.snackBarModel2.setButtonText("ACTION")                              //Mandatory
+    this.snackBarModel2.setButtonTextColor("#ECD540")
+}
+```
+```ets
+//Passing Customized/Non-customized object to MaterialSnackBar
+MaterialSnackBar({
+          obj : this.snackBarModel2,
+          func : this.SnackButtonAction
+        })
 ```
 ![s2](https://user-images.githubusercontent.com/84433855/173008731-c6df6d51-66cc-4cf0-bc86-57e0b2b60c62.png)
 
 ## Snackbar with two line message plus the action button
 ```ets
-import { TwoLineActionSnack
-}  from "@ohos/snackbar"
+//Creating object
+@State snackBarModel3: SnackBarModel = new SnackBarModel(SnackBarType.TwoLineActionSnack)
 ```
 ```ets
-TwoLineActionSnack({
-            message: this.message3,
-            button_text: this.button_text3,
-            func: this.SnackButtonAction
-          });
+//Customization
+aboutToAppear(){
+    this.snackBarModel3.setSnackBarText("Longer text associated with TwoLineActionSnack") //Mandatory
+    this.snackBarModel3.setSnackTextColor("#ffffff")
+    this.snackBarModel3.setSnackBackColor("#9400D3")
+    this.snackBarModel3.setOpacity(1)
+    this.snackBarModel3.setTimer(4000)
+    this.snackBarModel3.setButtonText("ACTION")                                           //Mandatory
+    this.snackBarModel3.setButtonTextColor("#ECD540")
+}
+```
+```ets
+//Passing Customized/Non-customized object to MaterialSnackBar
+MaterialSnackBar({
+          obj : this.snackBarModel3,
+          func : this.SnackButtonAction
+        })
 ```
 ![s3](https://user-images.githubusercontent.com/84433855/173008773-43338d25-e5fb-43c0-8405-704fec24db57.png)
 
 ## Snackbar with longer two line message plus the longer action button
 ```ets
-import { BigTwoLineActionSnack
-}  from "@ohos/snackbar"
+//Creating object
+@State snackBarModel4: SnackBarModel = new SnackBarModel(SnackBarType.BigTwoLineActionSnack)
 ```
 ```ets
-BigTwoLineActionSnack({
-            message: this.message4,
-            button_text: this.button_text4,
-            func: this.SnackButtonAction
-          });
-```         
+//Customization
+aboutToAppear(){
+    this.snackBarModel4.setSnackBarText("Longer text associated with   BigTwoLineActionSnack")                                                     //Mandatory
+    this.snackBarModel4.setSnackTextColor("#ffffff")
+    this.snackBarModel4.setSnackBackColor("#9400D3")
+    this.snackBarModel4.setOpacity(1)
+    this.snackBarModel4.setTimer(4000)
+    this.snackBarModel4.setButtonText("LONGER ACTION")                           //Mandatory
+    this.snackBarModel4.setButtonTextColor("#ECD540")
+}
+``` 
+```ets
+//Passing Customized/Non-customized object to MaterialSnackBar
+MaterialSnackBar({
+          obj : this.snackBarModel4,
+          func : this.SnackButtonAction
+        })
+```        
 ![s4](https://user-images.githubusercontent.com/84433855/173008958-96d9c4b5-893c-4213-9143-83e11898741e.png)
 
 ## Compatibility
