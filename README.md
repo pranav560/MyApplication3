@@ -22,25 +22,6 @@ import { MaterialSnackBar ,
 Access snackbar attributes through a object of SnackBarModel and customize the snackbar(if needed) using setter functions as
 shown and finally pass the object to MaterialSnackBar and action associated with action button.
 
-<br>
-**Note:** SnackBarModel is mandatory to import because the user can only modify the snackbar from object of SnackBarModel
-class. And importing SnackBarType is also equally important because it is the enum class which decide snackbar type . 
-Mandatory attributes are marked below, which are needed to be set by the user.
-Failure to provide data for mandatory attribute will push error in console.
-<br>
-
-```ets
-Set Functions --> Working
-Snackbar Attributes:
--SnackBarType --> SnackBarModel constructor parameter         //Mandatory
--setSnackBarText --> assign value to 'snackBarText'           //Mandatory
--setButtonText -->  assign value to 'snackButtonText'         //Mandatory except for SimpleSnack
--setSnackTextColor --> assign value to 'snackTextColor' 
--setSnackBackColor --> assign value to 'snackBackColor' 
--setOpacity --> assign value to 'opacity' 
--setTimer --> assign value to 'timer' 
--setButtonTextColor --> assign value to 'ButtonTextColor' 
-```
 ## Snackbar Designs: 
 
 ## Snackbar with only message
@@ -70,6 +51,10 @@ MaterialSnackBar({
 ```ets
 //Creating object
 @State snackBarModel2: SnackBarModel = new SnackBarModel(SnackBarType.OneLineActionSnack)
+//Custom Action 
+  SnackButtonAction: () => void = function () {
+    console.log("test")
+  }
 ```
 ```ets
 //Customization
@@ -96,6 +81,10 @@ MaterialSnackBar({
 ```ets
 //Creating object
 @State snackBarModel3: SnackBarModel = new SnackBarModel(SnackBarType.TwoLineActionSnack)
+//Custom Action 
+  SnackButtonAction: () => void = function () {
+    console.log("test")
+  }
 ```
 ```ets
 //Customization
@@ -122,6 +111,10 @@ MaterialSnackBar({
 ```ets
 //Creating object
 @State snackBarModel4: SnackBarModel = new SnackBarModel(SnackBarType.BigTwoLineActionSnack)
+//Custom Action 
+  SnackButtonAction: () => void = function () {
+    console.log("test")
+  }
 ```
 ```ets
 //Customization
