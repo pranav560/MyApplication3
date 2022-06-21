@@ -8,8 +8,6 @@ Install using npm
 
 ```npm install https://github.com/Applib-OpenHarmony/Material_UI_Snackbar```
 
-Details about OpenHarmony NPM environment configuration, see at [here](https://gitee.com/openharmony-tpc/docs/blob/master/OpenHarmony_npm_usage.md)
-
 ## Usage Instructions
 
 To be able to use snackbars, below import statement must be used
