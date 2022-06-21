@@ -12,7 +12,7 @@ Details about OpenHarmony NPM environment configuration, see at [here](https://g
 
 ## Usage Instructions
 
-Import all components at once
+To be able to use snackbars, below import statement must be used
 
 ```ets
 import { MaterialSnackBar ,
@@ -23,6 +23,7 @@ import { MaterialSnackBar ,
 
 Access snackbar attributes through a object of SnackBarModel and customize the snackbar(if needed) using setter functions as
 shown and finally pass the object to MaterialSnackBar and action associated with action button.
+
 <br>
 **Note:** SnackBarModel is mandatory to import because the user can only modify the snackbar from object of SnackBarModel
 class. And importing SnackBarType is also equally important because it is the enum class which decide snackbar type . 
@@ -126,12 +127,12 @@ MaterialSnackBar({
 ```ets
 //Customization
 aboutToAppear(){
-    this.snackBarModel4.setSnackBarText("Longer text associated with   BigTwoLineActionSnack")                                                     //Mandatory
+    this.snackBarModel4.setSnackBarText("Longer text associated with   BigTwoLineActionSnack")    //Mandatory
     this.snackBarModel4.setSnackTextColor("#ffffff")
     this.snackBarModel4.setSnackBackColor("#9400D3")
     this.snackBarModel4.setOpacity(1)
     this.snackBarModel4.setTimer(4000)
-    this.snackBarModel4.setButtonText("LONGER ACTION")                           //Mandatory
+    this.snackBarModel4.setButtonText("LONGER ACTION")                                             //Mandatory
     this.snackBarModel4.setButtonTextColor("#ECD540")
 }
 ``` 
