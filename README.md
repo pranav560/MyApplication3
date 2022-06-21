@@ -30,12 +30,13 @@ class. And importing SnackBarType is also equally important because it is the en
 Mandatory attributes are marked below, which are needed to be set by the user.
 Failure to provide data for mandatory attribute will push error in console.
 <br>
+
 ```ets
 Set Functions --> Working
 Snackbar Attributes:
--SnackBarType --> SnackBarModel constructor parameter  //Mandatory
--setSnackBarText --> assign value to 'snackBarText'   //Mandatory
--setButtonText -->  assign value to 'snackButtonText'        //Mandatory except for SimpleSnack
+-SnackBarType --> SnackBarModel constructor parameter         //Mandatory
+-setSnackBarText --> assign value to 'snackBarText'           //Mandatory
+-setButtonText -->  assign value to 'snackButtonText'         //Mandatory except for SimpleSnack
 -setSnackTextColor --> assign value to 'snackTextColor' 
 -setSnackBackColor --> assign value to 'snackBackColor' 
 -setOpacity --> assign value to 'opacity' 
